@@ -1,0 +1,9 @@
+streamlit
+flask
+sqlalchemy
+pandas
+numpy
+requests
+python-dotenv
+flask-cors
+supabase

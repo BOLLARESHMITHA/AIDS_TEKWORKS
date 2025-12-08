@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Purchase History</title></head>
+<body>
+  <h2>Purchase History</h2>
+  <table border="1">
+    <tr><th>Sale ID</th><th>Product ID</th><th>Quantity</th><th>Date</th></tr>
+    {% for h in history %}
+    <tr>
+      <td>{{ h[0] }}</td>
+      <td>{{ h[2] }}</td>
+      <td>{{ h[3] }}</td>
+      <td>{{ h[4] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

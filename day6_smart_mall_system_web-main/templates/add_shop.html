@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}Add Shop{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="mb-4">Add Shop</h2>
+        <form method="POST" action="{{ url_for('add_shop') }}">
+            <div class="mb-3">
+                <label class="form-label">Shop Name</label>
+                <input type="text" class="form-control" name="name" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Owner</label>
+                <input type="text" class="form-control" name="owner" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control" name="location" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Category</label>
+                <input type="text" class="form-control" name="category" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Add Shop</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

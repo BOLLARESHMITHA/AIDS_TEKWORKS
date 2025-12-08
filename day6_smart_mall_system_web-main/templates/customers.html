@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Customers List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Loyalty Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cust in customers %}
+        <tr>
+            <td>{{ cust.cust_id }}</td>
+            <td>{{ cust.name }}</td>
+            <td>{{ cust.email }}</td>
+            <td>{{ cust.phone }}</td>
+            <td>{{ cust.loyalty_points }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

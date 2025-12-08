@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Add Sale{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card-form">
+            <h2>Add Sale</h2>
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="sale_name" class="form-label">Sale Name</label>
+                    <input type="text" name="sale_name" id="sale_name" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="discount" class="form-label">Discount (%)</label>
+                    <input type="number" name="discount" id="discount" class="form-control" step="0.01" min="0" max="100" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Add Sale</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

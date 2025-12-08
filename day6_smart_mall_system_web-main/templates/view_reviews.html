@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Reviews {% if prod_id %}for Product {{ prod_id }}{% endif %}</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer ID</th>
+            <th>Rating</th>
+            <th>Comment</th>
+            <th>Created At</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for r in reviews %}
+        <tr>
+            <td>{{ r.review_id }}</td>
+            <td>{{ r.cust_id }}</td>
+            <td>{{ r.rating }}</td>
+            <td>{{ r.comment }}</td>
+            <td>{{ r.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,49 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #343a40;
+}
+
+.card-form {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.form-check-label {
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #007bff, #00a2ff);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #0056b3, #0077cc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.alert {
+    border-radius: 10px;
+    padding: 12px 20px;
+}

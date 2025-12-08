@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>View Notifications</h2>
+
+<form method="POST" class="mb-3">
+    <div class="row g-2">
+        <div class="col">
+            <input type="email" name="email" class="form-control" placeholder="Customer Email" value="{{ email }}">
+        </div>
+        <div class="col">
+            <select name="type" class="form-select">
+                <option value="">--Select Type--</option>
+                <option value="Sale" {% if notif_type=='Sale' %}selected{% endif %}>Sale</option>
+                <option value="ReturnReminder" {% if notif_type=='ReturnReminder' %}selected{% endif %}>Return Reminder</option>
+                <option value="Offer" {% if notif_type=='Offer' %}selected{% endif %}>Offer</option>
+                <option value="Alert" {% if notif_type=='Alert' %}selected{% endif %}>Alert</option>
+            </select>
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Filter</button>
+        </div>
+    </div>
+</form>
+
+{% if notifications %}
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer ID</th>
+            <th>Type</th>
+            <th>Message</th>
+            <th>Notify Date</th>
+            <th>Read</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for notif in notifications %}
+        <tr>
+            <td>{{ notif.notification_id }}</td>
+            <td>{{ notif.cust_id }}</td>
+            <td>{{ notif.type }}</td>
+            <td>{{ notif.message }}</td>
+            <td>{{ notif.notify_date }}</td>
+            <td>{{ 'Yes' if notif.read else 'No' }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p class="text-muted">No notifications found.</p>
+{% endif %}
+{% endblock %}

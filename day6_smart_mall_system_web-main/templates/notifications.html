@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Notifications for Customer {{ cust_id }}</h2>
+<table class="table table-striped">
+    <thead>
+        <tr><th>ID</th><th>Type</th><th>Message</th><th>Related ID</th><th>Notify Date</th><th>Read</th></tr>
+    </thead>
+    <tbody>
+        {% for n in notifications %}
+        <tr>
+            <td>{{ n.notification_id }}</td>
+            <td>{{ n.type }}</td>
+            <td>{{ n.message }}</td>
+            <td>{{ n.related_id }}</td>
+            <td>{{ n.notify_date }}</td>
+            <td>{{ 'Yes' if n.read else 'No' }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

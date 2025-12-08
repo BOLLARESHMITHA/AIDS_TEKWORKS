@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Sales List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr><th>ID</th><th>Sale Name</th><th>Discount (%)</th></tr>
+    </thead>
+    <tbody>
+        {% for s in sales %}
+        <tr>
+            <td>{{ s.sale_id }}</td>
+            <td>{{ s.sale_name }}</td>
+            <td>{{ s.discount }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

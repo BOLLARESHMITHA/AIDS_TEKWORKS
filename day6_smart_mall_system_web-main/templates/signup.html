@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Smart Mall</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+<body>
+
+<div class="auth-container">
+  <div class="auth-left">
+    <h1>Join Smart Mall</h1>
+    <p>Be part of our smart shopping network today!</p>
+  </div>
+
+  <div class="auth-right">
+    <form method="POST" action="{{ url_for('signup') }}" class="auth-form">
+      <h2>Create Account</h2>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <select name="role" required>
+        <option value="">Select Role</option>
+        <option value="admin">Admin</option>
+        <option value="customer">Customer</option>
+      </select>
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

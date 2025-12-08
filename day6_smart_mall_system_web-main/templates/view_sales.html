@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Sales List</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sale ID</th>
+            <th>Sale Name</th>
+            <th>Discount (%)</th>
+            <th>Products</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for sale in sales %}
+        <tr>
+            <td>{{ sale.sale_id }}</td>
+            <td>{{ sale.sale_name }}</td>
+            <td>{{ sale.discount }}</td>
+            <td>
+                {% if sale.products %}
+                    <ul>
+                    {% for prod in sale.products %}
+                        <li>{{ prod.prod_type }} - {{ prod.brand }}</li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    No products
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

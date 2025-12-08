@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}Send Notification{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="mb-4">Send Notification</h2>
+
+        {% if success %}
+            <div class="alert alert-success">{{ success }}</div>
+        {% endif %}
+        {% if error %}
+            <div class="alert alert-danger">{{ error }}</div>
+        {% endif %}
+
+        <form method="POST" action="{{ url_for('send_notification') }}">
+            <div class="mb-3">
+                <label class="form-label">Customer ID</label>
+                <input type="number" name="cust_id" class="form-control" placeholder="Enter Customer ID">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Notification Type</label>
+                <input type="text" name="type" class="form-control" placeholder="Sale / Offer / Reminder" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea name="message" class="form-control" rows="4" placeholder="Enter message..." required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Notification Date</label>
+                <input type="date" name="notify_date" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Send Notification</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

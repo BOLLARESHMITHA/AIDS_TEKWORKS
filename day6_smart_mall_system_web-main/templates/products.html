@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Products List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th><th>Type</th><th>Brand</th><th>Color</th><th>Price</th><th>Stock</th><th>On Sale</th><th>Sale ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in products %}
+        <tr>
+            <td>{{ p.prod_id }}</td>
+            <td>{{ p.prod_type }}</td>
+            <td>{{ p.brand }}</td>
+            <td>{{ p.color }}</td>
+            <td>{{ p.price }}</td>
+            <td>{{ p.stock }}</td>
+            <td>{{ 'Yes' if p.on_sale else 'No' }}</td>
+            <td>{{ p.sale_id }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
