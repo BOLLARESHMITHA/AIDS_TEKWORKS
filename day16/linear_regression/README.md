@@ -1,1 +1,1 @@
-# linear_regression
+# simple linear_regression
