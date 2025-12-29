@@ -1,0 +1,42 @@
+Right-skewed distribution
+Most tips are small (between 0 and ~4).
+Very few customers give high tips (>10).
+
+Peak at low tip values
+
+The highest frequency is near 0–1.
+
+Yellow group dominates
+
+Yellow bars are much higher, meaning:
+
+More observations
+
+Or higher frequency of tips in this category
+
+This group contributes most of the overall pattern.
+
+Green group is smaller & concentrated
+
+Green distribution is:
+
+Less frequent
+
+Mostly concentrated at lower tip values
+
+Suggests fewer high tips in this group.
+
+Long tail
+
+Tips go up to around 22–23, but these are rare outliers.
+
+A few generous customers increase the maximum value.
+
+
+
+
+Collected tips are mostly from 0 to 4 rupees
+very few customers gave tip above 10
+histogram graph is Rightly-skewed distribution
+yellow taxis customer gave more tip than green taxis
+observed high frequency at 0-1 in both yellow and green taxis tips
